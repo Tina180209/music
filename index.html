@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>淯婷琵琶教室</title>
+<meta name="description" content="淯婷老師的琵琶個別課：零基礎、興趣、客製化與樂理初階課程，免費線上試聽，實體課限雙北。">
+<meta property="og:title" content="淯婷琵琶教室">
+<meta property="og:description" content="琵琶琴齡 11 年，南藝大中國音樂學系高中部畢業。零基礎、興趣、客製化琵琶個別課與樂理課，免費線上試聽。">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5B2420">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235B2420'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23F4F1E8'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+<style>html{color-scheme:light}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#EFEBE8; --app:#FAF8F6; --card:#FFFFFF; --ink:#18221F; --muted:#6F6461; --line:#E4DCD8;
+  --felt:#5B2420; --felt-2:#8A3A2E; --brass:#B08433; --brass-soft:#F3E9D3; --on-felt:#F4F1E8;
+  --ok:#2E7D5B; --busy:#B7BDBA;
+  --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; --mono:"DM Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --bg:#110D0C; --app:#181312; --card:#221B19; --ink:#E9EEEB; --muted:#A99C98; --line:#372D2A;
+  --felt:#7A3329; --felt-2:#D08A6E; --brass:#D2A656; --brass-soft:#3A301C; --on-felt:#F4F1E8; --busy:#3C4743;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --bg:#110D0C; --app:#181312; --card:#221B19; --ink:#E9EEEB; --muted:#A99C98; --line:#372D2A;
+  --felt:#7A3329; --felt-2:#D08A6E; --brass:#D2A656; --brass-soft:#3A301C; --on-felt:#F4F1E8; --busy:#3C4743;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65}
+.app{max-width:460px;margin:0 auto;min-height:100vh;background:var(--app);position:relative;padding-bottom:96px}
+@media (min-width:520px){.app{box-shadow:0 0 0 1px var(--line),0 30px 80px -40px rgba(0,0,0,.35)}}
+.wrap{padding-inline:18px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0;line-height:1.3}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.muted{color:var(--muted)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--app) 88%,transparent);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:16px}
+.mark{width:30px;height:30px;border-radius:9px;background:var(--felt);display:grid;place-items:center;color:var(--on-felt)}
+.top .pill{font-size:12.5px;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card)}
+
+/* screens */
+.screen{display:none;animation:in .28s ease}
+.screen.on{display:block}
+@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.screen{animation:none}}
+.section{display:grid;gap:14px;padding-block:22px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.sec-head h2{font-size:20px}
+.link{background:none;border:0;color:var(--felt-2);font-size:13.5px;font-weight:500;padding:0}
+
+/* hero */
+.hero{margin:16px 18px 0;border-radius:22px;overflow:hidden;background:var(--felt);color:var(--on-felt);position:relative}
+.hero-photo{height:340px;position:relative;background:
+  radial-gradient(120% 90% at 80% 10%,rgba(208,166,86,.35),transparent 55%),
+  linear-gradient(160deg,#6A2B24,#34120F)}
+.staff{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 76%}
+.hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:70px;background:linear-gradient(transparent,var(--felt))}
+img.avatar{object-fit:cover;display:block}
+.photo-hint{position:absolute;right:12px;top:12px;font-size:11px;background:rgba(0,0,0,.28);padding:4px 9px;border-radius:99px;color:#F4F1E8}
+.hero-body{padding:18px 20px 20px;display:grid;gap:10px}
+.hero-body h1{font-size:27px;font-weight:900;letter-spacing:.02em}
+.hero-body .sub{color:rgba(244,241,232,.82);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;padding:3px 10px;border-radius:99px;background:rgba(244,241,232,.12);border:1px solid rgba(244,241,232,.2)}
+.cta{display:flex;gap:10px;margin-top:6px}
+.btn{border:0;border-radius:14px;padding:13px 16px;font-weight:700;font-size:15px;flex:1;text-align:center}
+.btn.brass{background:var(--brass);color:#1B1408}
+.btn.ghost{background:rgba(244,241,232,.12);color:var(--on-felt);border:1px solid rgba(244,241,232,.25)}
+.btn.felt{background:var(--felt);color:var(--on-felt)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border:1px solid var(--line);border-radius:18px;margin:14px 18px 0}
+.stat{padding:14px 8px;text-align:center;display:grid;gap:2px}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{font-family:var(--serif);font-size:22px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* video row */
+.hscroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-18px;padding:2px 18px 6px;scrollbar-width:none}
+.hscroll::-webkit-scrollbar{display:none}
+.vid{flex:0 0 72%;scroll-snap-align:start;text-decoration:none;color:inherit;display:grid;gap:8px}
+.thumb{aspect-ratio:16/9;max-width:100%;border-radius:14px;position:relative;overflow:hidden;background:linear-gradient(135deg,#2A2320,#4B3A2A)}
+.thumb.b{background:linear-gradient(135deg,#1C2B3A,#3B5166)}
+.thumb.d{background:linear-gradient(135deg,#3A2A14,#7A5A2A)}
+.thumb .vt{position:absolute;left:12px;bottom:10px;font-family:var(--serif);font-weight:900;font-size:22px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.thumb.c{background:linear-gradient(135deg,#2C1E2A,#5A3A4E)}
+.thumb[style]{background-size:cover!important;background-position:center!important}
+.thumb[style]::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15) 40%,rgba(0,0,0,.55))}
+.thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
+.thumb .dur{position:absolute;right:8px;bottom:8px;font-family:var(--mono);font-size:11px;color:#fff;background:rgba(0,0,0,.55);padding:1px 6px;border-radius:5px}
+.thumb .venue{position:absolute;left:10px;top:9px;font-size:11px;color:rgba(255,255,255,.85)}
+.vid h3{font-size:15px;font-family:var(--sans);font-weight:700}
+.vid p{font-size:12.5px;color:var(--muted)}
+
+/* lesson flow */
+.flow{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 16px}
+.step{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:13px 0}
+.step+.step{border-top:1px dashed var(--line)}
+.step .t{font-family:var(--mono);font-size:12px;color:var(--brass);padding-top:2px}
+.step h3{font-size:15px;font-family:var(--sans);font-weight:700}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* lesson mix */
+.mixcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;gap:14px}
+.mix{display:flex;height:14px;border-radius:99px;overflow:hidden;gap:3px}
+.mixrows{display:grid;gap:12px}
+.mixrows div{display:grid;grid-template-columns:12px 1fr auto auto;column-gap:8px;align-items:center}
+.mixrows i{width:10px;height:10px;border-radius:3px}
+.mixrows b{font-size:15px}
+.mixrows .pct{font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums}
+.mixrows .min{font-size:12px;color:var(--muted);min-width:52px;text-align:right}
+.mixrows p{grid-column:2/-1;font-size:13.5px;color:var(--muted)}
+.mixnote{font-size:13.5px;background:var(--brass-soft);border-radius:12px;padding:10px 12px}
+.cmp{display:grid;grid-template-columns:96px 1fr 64px;gap:10px;align-items:center;font-size:13.5px}
+.cmp .muted{font-family:var(--mono);font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.mix.free{border:1.5px dashed var(--line);background:repeating-linear-gradient(90deg,var(--felt) 0 33%,var(--brass) 33% 66%,var(--felt-2) 66% 100%);opacity:.45}
+.cmix{display:grid;gap:8px}
+.cmix .mix{height:10px}
+.cmix-l{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted)}
+.cmix-l i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}
+.cmix-free{font-size:12.5px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:6px 10px}
+.mixtabs{margin-inline:-16px;padding-inline:16px}
+.mixtabs .chip[aria-selected="true"]{background:var(--ink);color:var(--app);border-color:var(--ink)}
+#mixView{display:grid;gap:14px}
+#mixView .mix{height:16px}
+.mixdesc{font-size:13.5px;color:var(--muted)}
+.mixfree{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:8px}
+.mixfree span{border:1px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center;font-size:13.5px;display:grid;gap:4px;justify-items:center}
+.mixfree i{width:10px;height:10px;border-radius:3px}
+.trialnote{font-size:13px;background:var(--brass-soft);border-radius:12px;padding:10px 12px;margin:0}
+#f-goal{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;width:100%;margin-top:4px}
+.concert{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid}
+.poster{width:100%;max-width:100%;height:auto;display:block}
+.cbody{padding:16px 16px 4px;display:grid;gap:8px}
+.ctitle{font-size:26px;font-weight:900;letter-spacing:.12em}
+.cinfo{margin:0;display:grid}
+.cinfo div{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:6px 0;font-size:13.5px}
+.cinfo div+div{border-top:1px solid var(--line)}
+.cinfo dt{color:var(--muted);font-size:12.5px}
+.cinfo dd{margin:0}
+.prog{padding:12px 16px 16px;display:grid;gap:6px}
+.prog ol{list-style:none;margin:0;padding:0;display:grid}
+.prog li{display:grid;grid-template-columns:24px 1fr auto;column-gap:8px;align-items:baseline;padding:7px 0;border-top:1px dashed var(--line);font-size:14px}
+.prog .pn{font-family:var(--mono);font-size:11.5px;color:var(--brass)}
+.prog .pc{grid-column:2;font-size:12px;color:var(--muted)}
+.prog .pv{grid-column:3;grid-row:1/3;align-self:center;font-size:12px;text-decoration:none;color:var(--felt-2);border:1px solid var(--line);border-radius:99px;padding:3px 10px;white-space:nowrap}
+.ev.gold .rail::after{background:var(--brass)}
+.ev.gold h3::after{content:"★";color:var(--brass);margin-left:6px;font-size:13px}
+.more{margin-top:8px}
+.more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-size:13px;color:var(--felt-2);border:1px solid var(--line);border-radius:99px;padding:4px 12px;background:var(--card)}
+.more summary::-webkit-details-marker{display:none}
+.more[open] summary .chev{transform:rotate(180deg)}
+.more .concert{margin-top:10px}
+.ev .ctitle{font-family:var(--serif);font-size:22px;font-weight:900;letter-spacing:.12em}
+.cpick{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pick{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:10px 12px;display:grid;gap:2px;text-align:left}
+.pick b{font-size:14px}
+.pick small{font-size:12px;color:var(--muted)}
+.pick[aria-pressed="true"]{border-color:var(--brass);background:var(--brass-soft);box-shadow:inset 0 0 0 1px var(--brass)}
+.goals{display:flex;flex-wrap:wrap;gap:8px}
+.goals .chip{padding:8px 14px}
+/* quotes */
+.quote{background:var(--brass-soft);border-radius:18px;padding:16px 18px;display:grid;gap:8px}
+.quote p{font-family:var(--serif);font-size:15.5px}
+.quote span{font-size:12.5px;color:var(--muted)}
+
+/* courses */
+.filter{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-inline:-18px;padding-inline:18px}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-size:13.5px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--app);border-color:var(--ink)}
+.course{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.course summary{list-style:none;padding:16px 18px;display:grid;gap:8px;cursor:pointer}
+.course summary::-webkit-details-marker{display:none}
+.c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.c-top h3{font-size:18px}
+.age{font-size:12px;padding:3px 9px;border-radius:99px;background:var(--brass-soft);color:var(--ink);white-space:nowrap}
+.c-meta{display:flex;gap:14px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.c-meta b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.c-more{padding:0 18px 18px;display:grid;gap:12px;font-size:14px}
+.c-more ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.chev{transition:transform .2s;color:var(--muted)}
+.course[open] .chev{transform:rotate(180deg)}
+.note{font-size:12.5px;color:var(--muted);padding:12px 14px;border-radius:14px;border:1px dashed var(--line)}
+
+/* about */
+.profile{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center}
+.avatar{width:76px;height:76px;border-radius:22px;background:linear-gradient(150deg,var(--felt-2),var(--felt));display:grid;place-items:center;color:var(--on-felt);font-family:var(--serif);font-size:30px;font-weight:900}
+.profile h2{font-size:22px}
+.bio{font-size:14.5px;max-width:65ch}
+.kv{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:4px 16px}
+.kv div{display:grid;grid-template-columns:78px 1fr;gap:10px;padding:11px 0;font-size:14px}
+.kv div+div{border-top:1px solid var(--line)}
+.kv dt{color:var(--muted);font-size:13px}
+.kv dd{margin:0}
+.timeline{display:grid;gap:0;padding-left:4px}
+.ev{display:grid;grid-template-columns:52px 14px 1fr;gap:10px}
+.ev .y{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.ev .rail{position:relative}
+.ev .rail::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--line)}
+.ev .rail::after{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--app);border:2px solid var(--brass)}
+.ev .x{padding-bottom:16px}
+.ev h3{font-size:15px;font-family:var(--sans);font-weight:700}
+.ev p{font-size:13px;color:var(--muted)}
+.rep{display:flex;flex-wrap:wrap;gap:6px}
+.rep span{font-size:12.5px;padding:5px 11px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+
+/* booking */
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:5px}
+.seg button{border:0;background:transparent;border-radius:12px;padding:10px;display:grid;gap:1px;text-align:center}
+.seg button small{font-size:11.5px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--felt);color:var(--on-felt)}
+.seg button[aria-pressed="true"] small{color:rgba(244,241,232,.75)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.day{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:10px 0;display:grid;gap:0;text-align:center}
+.day small{font-size:11px;color:var(--muted)}
+.day b{font-family:var(--serif);font-size:19px;font-variant-numeric:tabular-nums}
+.day i{font-style:normal;font-size:12px;color:var(--ok)}
+.day.full i{color:var(--muted)}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--app);border-color:var(--ink)}
+.day[aria-pressed="true"] small,.day[aria-pressed="true"] i{color:var(--app);opacity:.8}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px 0;font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums}
+.slot:disabled{background:transparent;color:var(--busy);text-decoration:line-through;cursor:not-allowed}
+.slot[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#1B1408;font-weight:500}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;font-weight:500}
+.field input,.field select,.field textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;width:100%}
+.field textarea{min-height:72px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.err{font-size:12.5px;color:#B3412F}
+.done{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px}
+.done pre{margin:0;white-space:pre-wrap;font-family:var(--sans);font-size:13.5px;background:var(--app);border:1px solid var(--line);border-radius:12px;padding:12px}
+.line-id{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.line-id b{font-family:var(--mono);font-size:15px;user-select:all}
+.small-btn{border:1px solid var(--line);background:var(--app);border-radius:10px;padding:7px 12px;font-size:13px}
+
+/* tab bar */
+.tabbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;z-index:10;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
+.tabbar button{border:0;background:none;display:grid;justify-items:center;gap:2px;font-size:11.5px;color:var(--muted);padding:4px 0;border-radius:12px}
+.tabbar button svg{width:23px;height:23px}
+.tabbar button[aria-current="page"]{color:var(--felt-2);font-weight:700}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);color:var(--app);font-size:13px;padding:8px 14px;border-radius:99px;z-index:20}
+footer{padding:26px 18px 10px;font-size:12px;color:var(--muted);text-align:center}
+</style>
+
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><span class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span>淯婷琵琶教室</div>
+    <button class="pill" data-go="book">預約試聽</button>
+  </header>
+
+  <!-- HOME -->
+  <main class="screen on" id="s-home">
+    <section class="hero">
+      <div class="hero-photo">
+        <img class="hero-img" src="images/hero.jpg" alt="淯婷老師身穿旗袍、手持團扇的形象照"></div>
+      <div class="hero-body">
+        <span class="eyebrow" style="color:#D2A656">Pipa · 琵琶 · 實體／線上</span>
+        <h1>淯婷 老師</h1>
+        <p class="sub">國立臺南藝術大學中國音樂學系高中部畢業，琵琶琴齡長達 11 年，曾獲全國器樂大賽琵琶金獎、國際琵琶大賽銅獎。從彈挑、輪指到完整曲目，一步步陪你彈出琵琶的顆粒感與韻味。</p>
+        <div class="tags"><span class="tag">零基礎個別課</span><span class="tag">興趣個別課</span><span class="tag">客製化個別課</span><span class="tag">樂理初階</span></div>
+        <div class="cta">
+          <button class="btn brass" data-go="book">預約免費試聽</button>
+          <button class="btn ghost" data-go="courses">看課程</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><b>2</b><span>年教學</span></div>
+      <div class="stat"><b>15+</b><span>位學生</span></div>
+      <div class="stat"><b>30+</b><span>場演出</span></div>
+    </div>
+
+    <div class="wrap">
+      <section class="section">
+        <div class="sec-head"><h2>演出片段</h2><button class="link" data-go="about">完整經歷 ›</button></div>
+        <div class="hscroll">
+          <a class="vid" href="https://youtu.be/-NXe1EG5nQk" target="_blank" rel="noopener">
+            <div style="background-image:url(https://i.ytimg.com/vi/-NXe1EG5nQk/hqdefault.jpg)" class="thumb d"><span class="venue">「知音逢汕」聯合音樂會</span><span class="vt">《絲路飛天》</span><span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#18221F"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <h3>《絲路飛天》</h3><p>琵琶：蔡淯婷　鋼琴：黃郁棋</p>
+          </a>
+          <a class="vid" href="https://youtu.be/nwV2epFRAYc" target="_blank" rel="noopener">
+            <div style="background-image:url(https://i.ytimg.com/vi/nwV2epFRAYc/hqdefault.jpg)" class="thumb"><span class="venue">「知音逢汕」聯合音樂會</span><span class="vt">古曲《陳隋》</span><span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#18221F"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <h3>古曲《陳隋》</h3><p>琵琶：蔡淯婷</p>
+          </a>
+          <a class="vid" href="https://youtu.be/85qILQ5SIcY" target="_blank" rel="noopener">
+            <div style="background-image:url(https://i.ytimg.com/vi/85qILQ5SIcY/hqdefault.jpg)" class="thumb c"><span class="venue">「知音逢汕」聯合音樂會</span><span class="vt">《樓蘭姑娘》</span><span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#18221F"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <h3>《樓蘭姑娘》</h3><p>琵琶：蔡淯婷　鋼琴：黃郁棋　手鼓：劉芝而</p>
+          </a>
+          <a class="vid" href="https://youtu.be/06ixNOhq9h8" target="_blank" rel="noopener">
+            <div style="background-image:url(https://i.ytimg.com/vi/06ixNOhq9h8/hqdefault.jpg)" class="thumb b"><span class="venue">「知音逢汕」聯合音樂會</span><span class="vt">《十面埋伏》</span><span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="#18221F"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <h3>《十面埋伏》</h3><p>琵琶：蔡淯婷</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>一堂 60 分鐘學什麼</h2><button class="link" data-go="courses">看課程 ›</button></div>
+        <div class="mixcard">
+          <div class="filter mixtabs" role="tablist" aria-label="選擇課程" id="mixTabs"></div>
+          <div id="mixView" aria-live="polite"></div>
+          <p class="mixnote">🧚🏻‍♀️ 如果是學興趣，課堂不用太嚴肅，會活潑安排，不會太糾結基本功。想學的流行曲隨時都可以提出來～！</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>上課流程</h2></div>
+        <div class="flow">
+          <div class="step"><span class="t">課前</span><div><h3>老師先準備好樂譜</h3><p>不強制一開始就購買教材，直接下載老師提供的譜，列印或用平板看就可以。</p></div></div>
+          <div class="step"><span class="t">課堂</span><div><h3>基本功＋曲目</h3><p>依上面的比例安排，並依你的程度與目標隨時調整。</p></div></div>
+          <div class="step"><span class="t">課後</span><div><h3>文字筆記總結</h3><p>整理成筆記放在記事本，並寫下下次預計上課的內容。</p></div></div>
+          <div class="step"><span class="t">練習</span><div><h3>樂曲參考影片</h3><p>提供網路上的樂曲影片，必要時老師會自己錄製示範。</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>學生回饋</h2></div>
+        <div class="quote"><p>「我覺得老師很專業，也很適合初學者，剛剛上課也覺得很開心，因為我自己最想調整的剛好就是姿勢，畢竟我可以自己看譜但我不知道我的姿勢正不正確～」</p><span>琵琶學生・上課後回饋</span></div>
+        <div class="quote"><p>「第一次在走廊上课的时候就觉得老师教的好专业，讲话又干脆利落，在讲课和弹琵琶的时候感觉真的在闪闪发光！！如果是别的老师教我可能会从入门到放弃了，但我特别喜欢你的课😍我会尽力学好的」</p><span>琵琶學生・課堂回饋</span></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- COURSES -->
+  <main class="screen" id="s-courses">
+    <div class="wrap">
+      <section class="section">
+        <span class="eyebrow">課程項目</span>
+        <h2 style="font-size:24px">找到適合你的課</h2>
+        <div class="filter" id="courseFilter" role="group" aria-label="篩選課程">
+          <button class="chip" aria-pressed="true" data-f="all">全部</button>
+          <button class="chip" aria-pressed="false" data-f="zero">零基礎</button>
+          <button class="chip" aria-pressed="false" data-f="base">已有基礎</button>
+        </div>
+        <div id="courseList" style="display:grid;gap:12px"></div>
+        <p class="note">第一次上課前都可以先約 30 分鐘免費線上試聽，了解程度後再建議課程與進度。還沒有琵琶也沒關係，試聽時可以一起討論怎麼挑選。</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <main class="screen" id="s-about">
+    <div class="wrap">
+      <section class="section">
+        <div class="profile">
+          <img class="avatar" src="images/avatar.jpg" alt="淯婷老師">
+          <div><span class="eyebrow">關於老師</span><h2>淯婷</h2><p class="muted" style="font-size:13.5px">琵琶演奏／教學</p></div>
+        </div>
+        <p class="bio">Hi，我是淯婷！自幼學習琵琶，琵琶琴齡長達 11 年，參與過許多國際、國內音樂比賽及相關活動。從音樂班一路走來，我知道初學時最容易卡在哪裡，所以上課會把每個指法拆開講清楚，也會把「回家怎麼練」說明白，讓每個學生都能穩穩進步。</p>
+        <p class="bio">目前我還是一名學生，同時在科技業實習與擔任琵琶家教。每天在課業、工作和練琴之間安排時間，讓我特別能體會忙碌的學生和上班族：練琴不一定要花很長時間，但一定要用對方法。不論你是想培養興趣、彈喜歡的流行曲，還是準備比賽、考級，我都希望陪你在琵琶裡找到屬於自己的樂趣與成就感。</p>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>學歷</h2></div>
+        <dl class="kv" style="margin:0">
+          <div><dt>就讀中</dt><dd>淡江大學 歐洲語言學系 俄文組 四年級</dd></div>
+          <div><dt>畢業</dt><dd>國立臺南藝術大學 中國音樂學系 高中部</dd></div>
+          <div><dt>學琴</dt><dd>自幼學習琵琶，琵琶琴齡長達 11 年，師事陳麗晶老師；副修鋼琴。</dd></div>
+        </dl>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>社團與教學經歷</h2></div>
+        <div class="timeline">
+          <div class="ev"><span class="y">2025–</span><span class="rail"></span><div class="x"><h3>自由接案琵琶家教</h3><p>自 2025 年起｜琵琶個別課、線上課、基礎樂理家教</p></div></div>
+          <div class="ev"><span class="y">2025</span><span class="rail"></span><div class="x"><h3>淡江大學國學社 團長</h3><p>帶領社團運作與演出規劃</p></div></div>
+          <div class="ev"><span class="y">2025</span><span class="rail"></span><div class="x"><h3>淡江大學國學社 琵琶小老師</h3><p>指導社員琵琶技巧與曲目</p></div></div>
+          <div class="ev"><span class="y">2024</span><span class="rail"></span><div class="x"><h3>北京大學中樂學社 琵琶初級班老師</h3><p>帶領初學者建立琵琶基礎</p></div></div>
+          <div class="ev"><span class="y">2024</span><span class="rail"></span><div class="x"><h3>北京大學中樂學社 彈撥副部長</h3><p>協助彈撥聲部排練與管理</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>個人演出經歷</h2></div>
+        <div class="timeline">
+          <div class="ev"><span class="y">2024</span><span class="rail"></span><div class="x"><h3>【海島風情】《雲想花想》協奏者</h3><p>隨澎湖縣青少年國樂團｜澎湖縣政府文化局演奏廳</p></div></div>
+          <div class="ev"><span class="y">2023</span><span class="rail"></span><div class="x"><h3>「知音逢汕」朱柏瑞蔡淯婷二胡琵琶聯合音樂會</h3><p>國立臺南藝術大學 中國音樂學系合奏廳｜個人聯合音樂會</p><details class="more"><summary>查看海報與曲目 <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <article class="concert">
+          <img class="poster" src="images/poster.jpg" alt="「知音逢汕」朱柏瑞蔡淯婷二胡琵琶聯合音樂會海報">
+          <div class="cbody">
+            <span class="eyebrow">精選演出・二胡琵琶聯合音樂會</span>
+            <h3 class="ctitle">知音逢汕</h3>
+            <dl class="cinfo">
+              <div><dt>演出</dt><dd>朱柏瑞（二胡）、蔡淯婷（琵琶）</dd></div>
+              <div><dt>時間</dt><dd>2023 年 6 月 4 日（日）14:30</dd></div>
+              <div><dt>地點</dt><dd>國立臺南藝術大學 中國音樂學系合奏廳</dd></div>
+              <div><dt>指導</dt><dd>陳麗晶老師、蔡佩怡老師</dd></div>
+              <div><dt>鋼琴</dt><dd>黃郁棋、陳亦豐</dd></div>
+            </dl>
+            <p class="muted" style="font-size:12.5px">國立臺南藝術大學中國音樂學系 109 級晉級考音樂會</p>
+          </div>
+          <div class="prog"><span class="eyebrow">演出曲目</span><ol><li><span class="pn">01</span><span class="pt">《陳隋》</span><span class="pc">劉德海 曲</span><a class="pv" href="https://youtu.be/nwV2epFRAYc" target="_blank" rel="noopener">▶ 影片</a></li><li><span class="pn">02</span><span class="pt">《陝北抒懷》</span><span class="pc">陳耀星、陽春林 曲</span><span></span></li><li><span class="pn">03</span><span class="pt">《十面埋伏》</span><span class="pc">林石城 曲</span><a class="pv" href="https://youtu.be/06ixNOhq9h8" target="_blank" rel="noopener">▶ 影片</a></li><li><span class="pn">04</span><span class="pt">《夢釋（北市國定版）》</span><span class="pc">劉長遠 曲</span><span></span></li><li><span class="pn">05</span><span class="pt">《樓蘭姑娘》</span><span class="pc">劉錫津 曲</span><a class="pv" href="https://youtu.be/85qILQ5SIcY" target="_blank" rel="noopener">▶ 影片</a></li><li><span class="pn">06</span><span class="pt">《歡慶鑼鼓》</span><span class="pc">朱昌耀 曲</span><span></span></li><li><span class="pn">07</span><span class="pt">《絲路飛天》</span><span class="pc">趙聰 曲</span><a class="pv" href="https://youtu.be/-NXe1EG5nQk" target="_blank" rel="noopener">▶ 影片</a></li><li><span class="pn">08</span><span class="pt">《西域隨想（選段）》</span><span class="pc">王月明 曲</span><span></span></li></ol></div>
+        </article>
+            </details></div></div>
+          <div class="ev"><span class="y">2022</span><span class="rail"></span><div class="x"><h3>【舞動青春】</h3><p>隨臺南藝術大學民族管弦樂團｜嘉義市政府文化局合奏廳</p></div></div>
+          <div class="ev"><span class="y">2022</span><span class="rail"></span><div class="x"><h3>【相絲】</h3><p>隨臺南藝術大學彈撥樂團｜臺南藝術大學音樂廳</p></div></div>
+          <div class="ev"><span class="y">2021</span><span class="rail"></span><div class="x"><h3>【藝韻非凡】</h3><p>隨臺南藝術大學民族管弦樂團｜臺南文化中心演藝廳</p></div></div>
+          <div class="ev"><span class="y">2020</span><span class="rail"></span><div class="x"><h3>【管弦絲竹知多少】</h3><p>隨臺南藝術大學民族管弦樂團｜臺南文化中心演藝廳</p></div></div>
+          <div class="ev"><span class="y">2020</span><span class="rail"></span><div class="x"><h3>【琴同手足】</h3><p>馬公國中音樂廳</p></div></div>
+          <div class="ev"><span class="y">2020</span><span class="rail"></span><div class="x"><h3>【玩琵女孩】</h3><p>馬公國中音樂廳</p></div></div>
+        </div>
+
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>獲獎經歷</h2></div>
+        <div class="timeline">
+          <div class="ev"><span class="y">2023</span><span class="rail"></span><div class="x"><h3>文化國際青年音樂節</h3><p>琵琶青年組 優異（上半年）</p></div></div>
+          <div class="ev gold"><span class="y">2022</span><span class="rail"></span><div class="x"><h3>全國器樂大賽</h3><p>琵琶個人賽 高中組 金獎</p></div></div>
+          <div class="ev"><span class="y">2022</span><span class="rail"></span><div class="x"><h3>臺南市學生音樂比賽</h3><p>琵琶獨奏 高中職 A 組 優等</p></div></div>
+          <div class="ev gold"><span class="y">2021</span><span class="rail"></span><div class="x"><h3>中國【青樂杯】第五屆國際琵琶大賽</h3><p>銅獎</p></div></div>
+          <div class="ev"><span class="y">2020</span><span class="rail"></span><div class="x"><h3>臺南市學生音樂比賽</h3><p>琵琶獨奏 高中職 A 組 優等</p></div></div>
+          <div class="ev"><span class="y">2018</span><span class="rail"></span><div class="x"><h3>全國學生音樂比賽</h3><p>琵琶獨奏 國中 B 組 優等</p></div></div>
+          <div class="ev"><span class="y">2018</span><span class="rail"></span><div class="x"><h3>澎湖縣學生音樂比賽</h3><p>琵琶獨奏 國中 B 組 優等第一名</p></div></div>
+          <div class="ev"><span class="y">2016</span><span class="rail"></span><div class="x"><h3>澎湖縣學生音樂比賽</h3><p>琵琶獨奏 國小 B 組 優等第一名</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sec-head"><h2>教學項目</h2></div>
+        <div class="rep"><span>基礎樂理家教</span><span>琵琶家教</span><span>琵琶分組課</span><span>琵琶線上個別課</span></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- BOOK -->
+  <main class="screen" id="s-book">
+    <div class="wrap">
+      <form class="section" id="bookForm" novalidate>
+        <span class="eyebrow">預約上課</span>
+        <h2 style="font-size:24px">選一個你方便的時間</h2>
+
+        <div class="seg" role="group" aria-label="預約類型">
+          <button type="button" id="t-trial" aria-pressed="true" data-type="免費試聽"><b>免費試聽</b><small>線上・30 分鐘</small></button>
+          <button type="button" id="t-lesson" aria-pressed="false" data-type="正式上課"><b>正式上課</b><small>四種個別課</small></button>
+        </div>
+
+        <div class="field"><label id="courseLabel">想試聽的課程（可不選）</label><div class="cpick" id="coursePick" role="group" aria-labelledby="courseLabel"></div></div>
+        <p class="trialnote" id="trialNote">💻 試聽課一律以<b>線上</b>方式進行，確認後老師會傳視訊連結給你。</p>
+        <div class="field"><label>日期</label><div class="days" id="days"></div></div>
+        <div class="field"><label id="slotLabel">時段</label><div class="slots" id="slots"></div></div>
+
+        <p class="note" style="margin:4px 0 0">以下是上課前的評估內容，幫助老師了解你，安排最適合的課程。</p>
+        <div class="two">
+          <div class="field"><label for="f-name">1. 姓名</label><input id="f-name" autocomplete="name" placeholder="例：王小明"></div>
+          <div class="field"><label for="f-mode">正式上課方式</label><select id="f-mode"><option>實體課（限雙北）</option><option>線上課</option><option>都可以</option></select></div>
+        </div>
+        <div class="field"><label for="f-line">你的 LINE ID</label><input id="f-line" autocomplete="off" autocapitalize="off" placeholder="方便老師加你好友、傳試聽連結"></div>
+        <div class="field"><label for="f-base">2. 學生基本情況（有無基礎／程度）</label><textarea id="f-base" placeholder="例：國中生，完全沒學過琵琶；或：學過兩年，會彈《春雨》"></textarea></div>
+        <div class="field"><label id="goalLabel">3. 學琴目標（可複選）</label>
+          <div class="goals" id="goals" role="group" aria-labelledby="goalLabel">
+            <button type="button" class="chip" aria-pressed="false">發展興趣</button>
+            <button type="button" class="chip" aria-pressed="false">專業發展</button>
+            <button type="button" class="chip" aria-pressed="false">考檢定</button>
+            <button type="button" class="chip" aria-pressed="false">參與比賽</button>
+            <button type="button" class="chip" aria-pressed="false">想彈流行曲</button>
+          </div>
+          <input id="f-goal" placeholder="其他目標，請自行填寫（例：想在婚禮上演奏）" aria-label="其他學琴目標">
+        </div>
+        <div class="field"><label for="f-future">4. 未來展望（希望達到的程度或水準）</label><textarea id="f-future" placeholder="例：一年內能完整彈一首傳統曲；或：準備考音樂班"></textarea></div>
+        <p class="err" id="err" hidden></p>
+        <button class="btn felt" type="submit">確認時段</button>
+      </form>
+
+      <section class="section" id="doneBox" hidden>
+        <div class="done">
+          <span class="eyebrow">最後一步</span>
+          <h2 style="font-size:20px">把這段訊息傳給老師的 LINE</h2>
+          <p class="muted" style="font-size:13.5px">老師確認後會回覆你，預約才算完成。</p>
+          <pre id="msg"></pre>
+          <button class="btn brass" type="button" id="copyMsg">複製訊息</button>
+        </div>
+        <div class="line-id"><div><span class="muted" style="font-size:12px">老師的 LINE ID</span><br><b id="lineId">（待補）</b></div><button class="small-btn" type="button" id="copyLine">複製</button></div>
+        <button class="link" type="button" id="again" style="justify-self:start">重新選時段</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>© 淯婷琵琶教室</footer>
+
+  <nav class="tabbar" aria-label="主選單">
+    <button data-tab="home" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>首頁</button>
+    <button data-tab="courses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="16" rx="6" ry="6"/><path d="M12 10V2M10 3h4M10.5 13v6M13.5 13v6"/></svg>課程</button>
+    <button data-tab="about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>經歷</button>
+    <button data-tab="book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>預約</button>
+  </nav>
+</div>
+
+<script>
+const MIXC={"基本功":"var(--felt)","傳統曲":"var(--brass)","流行曲":"var(--felt-2)"};
+const COURSES=[
+  {k:"zero",name:"零基礎個別課",age:"完全零基礎",len:"60 分鐘",price:"NT$ 600",
+   intro:"適合完全沒學過琵琶的你，從持琴姿勢和指法開始，一步一步打好基礎。",
+   mix:[["基本功",60],["傳統曲",30],["流行曲",10]],
+   list:["持琴姿勢、彈挑、輪指等基本指法","音階、練習曲建立穩定基礎","課前提供樂譜，平板或列印即可"]},
+  {k:"base",name:"興趣個別課",age:"已有基礎",len:"60 分鐘",price:"NT$ 600",
+   intro:"適合已有基礎，想以流行曲為主要學習內容的你，輕鬆彈自己喜歡的歌。",
+   mix:[["基本功",40],["流行曲",60]],
+   list:["想學的流行曲隨時都可以提出來","保留基本功，讓流行曲彈得更好聽","提供參考影片，必要時老師錄製示範"]},
+  {k:"base",name:"客製化個別課",age:"已有基礎",len:"60 分鐘",price:"NT$ 650",
+   intro:"適合已有基礎，想同時加深基本功、傳統曲、流行曲，或想參與比賽、考級、演出的你，比例依需求量身安排。",
+   mix:null,
+   list:["依你的程度與目標安排內容比例","比賽、考級、演出曲目準備","課後筆記總結＋下次上課內容"]},
+  {k:"zero",name:"樂理初階個別課",age:"零基礎",len:"60 分鐘",price:"NT$ 550",
+   intro:"適合零基礎，想學習視唱、樂理、聽寫、節奏的你，打好讀譜與聽音的底子。",
+   mix:null,topics:["視唱","樂理","聽寫","節奏"],
+   list:["看懂簡譜與五線譜、節奏與音程","視唱與聽寫練習","和弦、音程等知識學習"]}
+];
+function mixHTML(c){
+  if(c.topics)return `<div class="rep">${c.topics.map(t=>`<span>${t}</span>`).join("")}</div>`;
+  if(!c.mix)return `<p class="cmix-free">基本功・傳統曲・流行曲　比例依你的需求調整</p>`;
+  return `<div class="cmix"><div class="mix">${c.mix.map(([n,v])=>`<span style="flex:${v};background:${MIXC[n]}"></span>`).join("")}</div>
+  <div class="cmix-l">${c.mix.map(([n,v])=>`<span><i style="background:${MIXC[n]}"></i>${n} ${v}%</span>`).join("")}</div></div>`;
+}
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function renderCourses(f){
+  $("#courseList").innerHTML=COURSES.filter(c=>f==="all"||c.k===f).map(c=>`
+  <details class="course"><summary>
+    <div class="c-top"><h3>${c.name}</h3><span class="age">${c.age}</span></div>
+    <p class="muted" style="font-size:13.5px">${c.intro}</p>
+    ${mixHTML(c)}
+    <div class="c-meta"><span>每堂 <b>${c.len}</b></span><span><b>${c.price}</b>／小時</span>
+      <svg class="chev" style="margin-left:auto" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+  </summary><div class="c-more"><ul>${c.list.map(x=>`<li>${x}</li>`).join("")}</ul>
+    <button class="btn felt" type="button" data-go="book" data-course="${c.name}">預約這堂課的試聽</button></div></details>`).join("");
+}
+renderCourses("all");
+/* home: tap a course to see its mix */
+const MIXINFO={"基本功":"音階、練習曲，打好彈挑、輪指等指法基礎。","傳統曲":"學習琵琶經典曲目，認識傳統的韻味與技巧。","流行曲":"彈自己喜歡的歌，想學的流行曲隨時都可以提出來！"};
+let mixSel=0;
+function renderMix(){
+  $("#mixTabs").innerHTML=COURSES.map((c,i)=>`<button type="button" role="tab" class="chip" aria-selected="${i===mixSel}" data-m="${i}">${c.name.replace("個別課","")}</button>`).join("");
+  const c=COURSES[mixSel];let body="";
+  if(c.mix){
+    body=`<div class="mix" role="img" aria-label="${c.mix.map(([n,v])=>n+" "+v+"%").join("、")}">${c.mix.map(([n,v])=>`<span style="flex:${v};background:${MIXC[n]}"></span>`).join("")}</div>
+    <div class="mixrows">${c.mix.map(([n,v])=>`<div><i style="background:${MIXC[n]}"></i><b>${n}</b><span class="pct">${v}%</span><span class="min">約 ${Math.round(v*0.6)} 分</span><p>${MIXINFO[n]}</p></div>`).join("")}</div>`;
+  }else if(c.topics){
+    body=`<div class="mixfree">${c.topics.map(t=>`<span><b>${t}</b></span>`).join("")}</div>`;
+  }else{
+    body=`<div class="mixfree">${Object.keys(MIXC).map(n=>`<span><i style="background:${MIXC[n]}"></i>${n}</span>`).join("")}</div><p class="mixdesc">三項內容的比例依你的需求量身安排，比賽、考級、演出準備也可以。</p>`;
+  }
+  $("#mixView").innerHTML=`<div class="c-top"><h3 style="font-size:17px">${c.name}</h3><span class="age">${c.age}・${c.price}</span></div><p class="mixdesc">${c.intro}</p>${body}`;
+}
+$("#mixTabs").addEventListener("click",e=>{const b=e.target.closest("[data-m]");if(!b)return;mixSel=+b.dataset.m;renderMix()});
+renderMix();
+
+$("#courseFilter").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;$$("#courseFilter .chip").forEach(c=>c.setAttribute("aria-pressed",c===b));renderCourses(b.dataset.f)});
+
+/* tabs */
+const TABS=["home","courses","about","book"];
+function go(t){
+  if(!TABS.includes(t))t="home";
+  TABS.forEach(x=>$("#s-"+x).classList.toggle("on",x===t));
+  $$(".tabbar button").forEach(b=>{if(b.dataset.tab===t)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
+  window.scrollTo({top:0});
+  try{history.replaceState(null,"","#"+t)}catch(e){}
+}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-tab]");if(t)return go(t.dataset.tab);
+  const g=e.target.closest("[data-go]");if(g){if(g.dataset.course){state.course=g.dataset.course;renderPick();}go(g.dataset.go)}
+});
+go((location.hash||"").slice(1));
+
+/* booking */
+const WK=["日","一","二","三","四","五","六"];
+/* 老師開放的時段：只寫日期＝整天可以；有寫時間＝只開放那個時段 */
+/* 整天：10:00–20:00，扣掉 12:00–13:00 與 18:00–19:00。只寫 "19:00" 的日子＝19:00–20:00 */
+const FULLDAY=[["10:00","12:00"],["13:00","18:00"],["19:00","20:00"]];
+const OPEN={"2026-10-03":null,"2026-10-07":[["19:00","20:00"]],"2026-10-09":null,"2026-10-10":null,"2026-10-11":null,"2026-10-14":[["19:00","20:00"]],"2026-10-18":null,"2026-10-21":[["19:00","20:00"]],"2026-10-24":null,"2026-10-25":null,"2026-10-28":[["19:00","20:00"]]};
+const state={type:"免費試聽",day:null,slot:null,course:null};
+const today=new Date();today.setHours(0,0,0,0);
+const days=Object.keys(OPEN).map(k=>{const[y,m,d]=k.split("-").map(Number);return{d:new Date(y,m-1,d),times:OPEN[k]||FULLDAY,full:!OPEN[k]}}).filter(x=>x.d>today).sort((a,b)=>a.d-b.d);
+const toMin=t=>{const[h,m]=t.split(":").map(Number);return h*60+m},toT=m=>String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
+function slotsFor(x){const len=state.type==="免費試聽"?30:60,out=[];
+  x.times.forEach(([a,b])=>{for(let m=toMin(a);m+len<=toMin(b);m+=len)out.push({t:toT(m),busy:false})});return out}
+function renderDays(){
+  if(!days.length){$("#days").innerHTML=`<p class="muted" style="font-size:13px;padding:4px 0">目前沒有開放的時段，請直接加老師 LINE 詢問。</p>`;return}
+  $("#days").innerHTML=days.map((x,i)=>{const d=x.d;
+    return `<button type="button" class="day" data-i="${i}" aria-pressed="${state.day===i}"><b>${d.getMonth()+1}/${d.getDate()}</b><i>週${WK[d.getDay()]}</i></button>`}).join("");
+}
+function renderSlots(){
+  if(state.day===null){$("#slots").innerHTML=`<p class="muted" style="grid-column:1/-1;font-size:13px">先選日期，就會看到可預約的時段。</p>`;return}
+  const d=days[state.day];
+  $("#slots").innerHTML=slotsFor(d).map(s=>`<button type="button" class="slot" ${s.busy?"disabled":""} aria-pressed="${state.slot===s.t}" data-t="${s.t}">${s.t}</button>`).join("");
+}
+$("#days").addEventListener("click",e=>{const b=e.target.closest(".day");if(!b)return;state.day=+b.dataset.i;state.slot=null;renderDays();renderSlots()});
+$("#slots").addEventListener("click",e=>{const b=e.target.closest(".slot");if(!b||b.disabled)return;state.slot=b.dataset.t;renderSlots()});
+$(".seg").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;state.type=b.dataset.type;$$(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));$("#trialNote").hidden=state.type!=="免費試聽";$("#courseLabel").textContent=state.type==="免費試聽"?"想試聽的課程（可不選）":"選擇課程";state.slot=null;renderSlots()});
+function renderPick(){$("#coursePick").innerHTML=COURSES.map(c=>`<button type="button" class="pick" aria-pressed="${state.course===c.name}" data-c="${c.name}"><b>${c.name}</b><small>${c.age}・${c.price}</small></button>`).join("")}
+$("#coursePick").addEventListener("click",e=>{const b=e.target.closest(".pick");if(!b)return;state.course=state.course===b.dataset.c?null:b.dataset.c;renderPick()});
+renderPick();
+state.day=days.length?0:null;renderDays();renderSlots();
+
+$("#bookForm").addEventListener("submit",e=>{
+  e.preventDefault();const err=$("#err");
+  const name=$("#f-name").value.trim(),base=$("#f-base").value.trim(),future=$("#f-future").value.trim();
+  const goals=$$("#goals .chip").filter(c=>c.getAttribute("aria-pressed")==="true").map(c=>c.textContent);
+  const lineId=$("#f-line").value.trim(),goalTxt=$("#f-goal").value.trim();if(goalTxt)goals.push(goalTxt);
+  const miss=[];if(state.type==="正式上課"&&!state.course)miss.push("課程");if(state.slot===null)miss.push("時段");if(!name)miss.push("姓名");if(!lineId)miss.push("LINE ID");if(!base)miss.push("基本情況");if(!goals.length)miss.push("學琴目標");
+  if(miss.length){err.textContent="還需要填：「"+miss.join("」「")+"」";err.hidden=false;return}
+  err.hidden=true;const d=days[state.day].d;
+  const txt=`老師您好，我想預約${state.type}：
+📅 ${d.getMonth()+1}/${d.getDate()}（週${WK[d.getDay()]}） ${state.slot}｜${state.type==="免費試聽"?"線上試聽":$("#f-mode").value}${state.course?"\n🎵 "+(state.type==="免費試聽"?"想試聽：":"課程：")+state.course:""}
+
+1. 姓名：${name}
+   LINE ID：${lineId}${state.type==="免費試聽"?"\n   正式上課方式：":""}${state.type==="免費試聽"?$("#f-mode").value:""}
+2. 基本情況：${base}
+3. 學琴目標：${goals.join("、")}
+4. 未來展望：${future||"還在想，想和老師討論"}`;
+  $("#msg").textContent=txt;$("#bookForm").hidden=true;$("#doneBox").hidden=false;window.scrollTo({top:0});
+});
+$("#goals").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b)b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true")});
+$("#again").addEventListener("click",()=>{$("#bookForm").hidden=false;$("#doneBox").hidden=true});
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),1800)}
+function copy(text,el){navigator.clipboard.writeText(text).then(()=>toast("已複製")).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);toast("已選取，請長按複製")})}
+$("#copyMsg").addEventListener("click",()=>copy($("#msg").textContent,$("#msg")));
+$("#copyLine").addEventListener("click",()=>copy($("#lineId").textContent,$("#lineId")));
+</script>
+
+</body>
+</html>
